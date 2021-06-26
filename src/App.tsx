@@ -8,7 +8,7 @@ function App() {
         <div className="App">
             <h1 onClick={onClick}>
                 <span className="icon-id-badge-fill" />
-                Hello Worlddddddd
+                Hello World
             </h1>
         </div>
     )
