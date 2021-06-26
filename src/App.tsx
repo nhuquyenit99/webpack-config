@@ -6,7 +6,10 @@ function App() {
     }
     return (
         <div className="App">
-            <h1 onClick={onClick}>Hello Worlddddddd</h1>
+            <h1 onClick={onClick}>
+                <span className="icon-id-badge-fill" />
+                Hello Worlddddddd
+            </h1>
         </div>
     )
 }
