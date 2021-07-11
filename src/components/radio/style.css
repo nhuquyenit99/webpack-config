@@ -1,0 +1,10 @@
+.ant-radio-wrapper.base-radio > span:last-child {
+    font-size: 18px;
+    font-weight: bold;
+}
+.ant-radio-wrapper.base-radio {
+    align-items: center;
+}
+.ant-radio-wrapper.base-radio > .ant-radio {
+    top: 0;
+}

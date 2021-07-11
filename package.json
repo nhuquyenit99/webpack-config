@@ -1,5 +1,4 @@
 {
-  "name": "bai3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -42,6 +41,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
+    "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^1.3.0",
     "prettier": "^2.1.2",
     "sass": "^1.29.0",
@@ -56,6 +56,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "antd": "^4.16.6",
     "bootstrap": "5.0.0-alpha1",
     "immer": "^7.0.14",
     "react": "^17.0.1",
@@ -66,6 +67,9 @@
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.2.1",
     "webpack": "^5.4.0",
+    "webpack-bundle-analyzer": "^4.1.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.8.0"
   }
 }

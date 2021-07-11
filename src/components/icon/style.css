@@ -1,0 +1,17 @@
+.icon-unchecked::after {
+    content: "\e903";
+}
+.icon-checked::after {
+    content: "\e904";
+}
+.icon-chevron-down::after {
+    content: "\e902";
+}
+.icon {
+    font-family: "icomoon" !important;
+    font-variant: normal;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none;
+    line-height: 1;
+}

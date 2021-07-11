@@ -1,28 +1,26 @@
-const path = require("path")
-const { merge } = require("webpack-merge")
-const webpack = require("webpack")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const CopyPlugin = require("copy-webpack-plugin")
-const Dotenv = require("dotenv-webpack")
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const { mergeWithRules } = require("webpack-merge")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const CompressionPlugin = require("compression-webpack-plugin")
 
 const commonConfig = require("./common")
 
-module.exports = merge(commonConfig, {
+module.exports = mergeWithRules({
+    module: {
+        rules: {
+            test: "match",
+            use: {
+                loader: "match",
+                options: "replace"
+            }
+        }
+    }
+})(commonConfig, {
     mode: "production",
     module: {
         rules: [
             {
-                test: /\.(ts|tsx)$/,
-                use: ["ts-loader", "eslint-loader"],
-                exclude: /node_modules/
-            },
-            {
                 test: /\.(s[ac]ss|css)$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
                     {
                         loader: "css-loader",
                         options: { sourceMap: false }
@@ -57,28 +55,7 @@ module.exports = merge(commonConfig, {
             }
         ]
     },
-    devtool: "source-map",
     plugins: [
-        new Dotenv(),
-        new HtmlWebpackPlugin({
-            template: "public/index.html"
-        }),
-        new CopyPlugin({
-            patterns: [
-                {
-                    from: "**/*",
-                    globOptions: {
-                        ignore: ["index.html"]
-                    },
-                    to: "",
-                    context: path.resolve("public")
-                }
-            ]
-        }),
-        new MiniCssExtractPlugin({
-            filename: "[name].css"
-        }),
-        new webpack.ProgressPlugin(),
         new CleanWebpackPlugin(),
         new CompressionPlugin({
             test: /\.(css|js|html|svg)$/
