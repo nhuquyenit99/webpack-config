@@ -1,0 +1,36 @@
+.base-checkbox.ant-checkbox-wrapper {
+    align-items: center;
+}
+.base-checkbox .ant-checkbox-inner {
+    display: none;
+}
+.base-checkbox .ant-checkbox:not(.ant-checkbox-checked):before {
+    content: "\e903";
+    color: #e6e6e6;
+}
+.base-checkbox .ant-checkbox-checked:before {
+    content: "\e904";
+    color: #1e90ff;
+}
+.base-checkbox .ant-checkbox {
+    font-family: "icomoon";
+    font-size: 24px;
+    outline: none;
+    top: 0;
+}
+.base-checkbox .ant-checkbox-checked:hover {
+    outline: none;
+}
+.base-checkbox .ant-checkbox::after {
+    display: none;
+}
+
+.base-checkbox:not(.ant-checkbox-wrapper-disabled) .ant-checkbox:hover::before {
+    color: #1e90ff;
+    opacity: 0.5;
+}
+
+.base-checkbox > span:last-child {
+    font-weight: bold;
+    font-size: 18px;
+}

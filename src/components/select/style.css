@@ -1,0 +1,23 @@
+.base-select.ant-select-single::after {
+    font-family: "icomoon";
+    content: '\e902';
+    position: absolute;
+    right: 10px;
+    font-size: 24px;
+}
+
+.base-select.ant-select {
+    display: inline-flex;
+    align-items: center;
+}
+
+.base-select.ant-select .ant-select-selector {
+    height: 44px !important;
+    align-items: center;
+    font-size: 18px;
+}
+.base-dropdown.ant-select-dropdown .ant-select-item {
+    height: 44px;
+    font-size: 18px;
+    align-items: center;
+}

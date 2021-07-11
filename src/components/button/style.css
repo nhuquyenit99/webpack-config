@@ -1,0 +1,22 @@
+.ant-btn.base-button {
+    border-radius: 4px;
+    min-width: 145px;
+    height: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: normal;
+}
+.ant-btn.base-button.secondary {
+    border: solid 2px #1e90ff;
+    color: #1e90ff;
+}
+.ant-btn.base-button.primary {
+    background-color: #ff349b;
+    color: white;
+    border: none;
+}
+.ant-btn.base-button.secondary:hover, 
+.ant-btn.base-button.primary:hover {
+    opacity: 0.7;
+}
